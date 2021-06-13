@@ -19,12 +19,16 @@ function setUser(event) {
 }
 
 
+
 function initUser() {
 
+    const h2 =document.querySelector("#listUserName");
+    const username = getUser();
+    h2.innerHTML = `Hello ${username}`;
+    
     if(getUser() != null )
     {
-        const h2 =document.querySelector("#listUserName");
-        h2.innerHTML = `Hello ${getUser()}`;
+        
 
         const task = document.querySelector(".task");
         task.classList.toggle("inactive");
